@@ -1,0 +1,24 @@
+# node_modules in both backend api and frontend
+frontend/api/node_modules/
+frontend/node_modules/
+
+# environment files
+frontend/api/.env
+
+# build output
+frontend/build/
+frontend/dist/
+
+# system files
+.DS_Store
+Thumbs.db
+
+# log files
+*.log
+
+# editor and OS-specific files
+*.swp
+*.swo
+.vscode/
+.idea/
+*.iml

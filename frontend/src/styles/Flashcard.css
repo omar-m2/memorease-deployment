@@ -1,0 +1,249 @@
+/* Flashcard container style */
+.flashcard {
+    display: inline-block;
+    width: 300px;
+    height: 220px;
+    margin: 16px auto;
+    perspective: 1000px;
+  }
+
+  /* Inner part of flashcard style */
+  .flashcard-inner {
+    position: relative;
+    width: 300px;
+    height: 220px;
+    text-align: center;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+
+  /* Flip class for the flashcard style */
+  .flipped {
+    transform: rotateY(180deg);
+  }
+
+  /* Common styles for both front and back of the flashcard */
+  .flashcard-front,
+  .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: pre-wrap;
+    overflow: auto;
+    padding: 10px;
+    border: 1px solid #666666;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    scrollbar-width: thin; /* Firefox scrollbar style */
+    scrollbar-color: transparent #B4BDC8; /* Firefox scrollbar style */
+  }
+
+  /* WebKit browsers scrollbar style for both front and back of the flashcard */
+  .flashcard-front::-webkit-scrollbar,
+  .flashcard-back::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .flashcard-front::-webkit-scrollbar-track,
+  .flashcard-back::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .flashcard-front::-webkit-scrollbar-thumb,
+  .flashcard-back::-webkit-scrollbar-thumb {
+    background: #B4BDC8;
+    border-radius: 20px;
+  }
+
+  .flashcard-front::-webkit-scrollbar-thumb:hover,
+  .flashcard-back::-webkit-scrollbar-thumb:hover {
+    background: #607084;
+  }
+
+  .flashcard-front::-webkit-scrollbar-corner,
+  .flashcard-back::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Front of the flashcard style */
+  .flashcard-front {
+    background: linear-gradient(90deg, #154264 10%, #632E3D 50%, #B11A15 100%);
+  }
+
+  /* Back of the flashcard style */
+  .flashcard-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(90deg, #3D8C40 10%, #4CAF50 50%, #3D8C40 100%);
+  }
+
+  /* Flashcard form style */
+  .flashcard-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Flashcord form textarea style */
+  .flashcard-form textarea {
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    resize: vertical;
+    background-color: #444444;
+    color: #000000;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: bold;
+    overflow: auto;
+    scrollbar-width: thin; /* Firefox scrollbar width */
+    scrollbar-color: transparent #B4BDC8; /* Firefox scrollbar color */
+  }
+
+  /* WebKit browsers scrollbar style for flashcard form textarea */
+  .flashcard-form textarea::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .flashcard-form textarea::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .flashcard-form textarea::-webkit-scrollbar-thumb {
+    background: #B4BDC8;
+    border-radius: 20px;
+  }
+
+  .flashcard-form textarea::-webkit-scrollbar-thumb:hover {
+    background: #607084;
+  }
+
+  .flashcard-form textarea::-webkit-scrollbar-corner,
+  .flashcard-form textarea::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Flashcard list style */
+  .flashcard-list {
+    font-family: Helvetica;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  /* Flashcard review container and edit buttons container */
+  .flashcard-container, .btn-edit-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Save button style */
+  .btn-save {
+    background-color: #45A020;
+  }
+
+  /* Save button hover style */
+  .btn-save:hover {
+    background-color: #50BA25;
+  }
+
+  /* Edit button style */
+  .btn-edit {
+    background-color: #1A527D;
+  }
+
+  /* Edit button hover style */
+  .btn-edit:hover {
+    background-color: #20659B;
+  }
+
+  /* Cancel and delete buttons style */
+  .btn-cancel, .btn-delete {
+    background-color: #DD201A;
+  }
+
+  /* Cancel and delete buttons hover style */
+  .btn-cancel:hover, .btn-delete:hover {
+    background-color: #E6322D;
+  }
+
+  /* Flip all and fold all buttons style */
+  .btn-all {
+    background-color: #1F8C5F;
+  }
+
+  /* Flip all and fold all buttons hover style */
+  .btn-all:hover {
+    background-color: #25A872;
+  }
+
+/* Media Queries for Flashcard.css */
+
+/* Mobile devices (< 480px) */
+@media screen and (max-width: 480px) {
+  .flashcard {
+    width: 240px;
+    height: 180px;
+    margin: 16px auto;
+  }
+
+  .flashcard-inner {
+    width: 240px;
+    height: 180px;
+  }
+
+  .flashcard-front, .flashcard-back {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .flashcard-form textarea {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .flashcard-list {
+    font-size: 20px;
+  }
+
+  .flashcard-container, .btn-edit-container {
+    gap: 10px;
+  }
+}
+
+/* Tablets (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .flashcard {
+    width: 270px;
+    height: 200px;
+  }
+
+  .flashcard-inner {
+    width: 270px;
+    height: 200px;
+  }
+
+  .flashcard-form textarea {
+    width: 85%;
+  }
+
+  .flashcard-list {
+    font-size: 22px;
+  }
+}

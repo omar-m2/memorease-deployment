@@ -1,0 +1,66 @@
+/* Home component style */
+.home {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    user-select: none;
+  }
+
+  /* Create and edit flashcards buttons style */
+  .btn-create, .btn-edit-all {
+    background-color: #45A020;
+  }
+
+  /* Create and edit flashcards buttons hover style */
+  .btn-create:hover, .btn-edit-all:hover {
+    background-color: #50BA25;
+  }
+
+  /* Common styles for heading 2, heading 3 and paragraph */
+  h2, h3, p {
+    font-family: Helvetica;
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+
+  /* Heading 2 and heading 3 */
+  h2, h3 {
+    font-size: 25px;
+  }
+
+  /* Paragraph style */
+  p {
+    font-size: 20px;
+  }
+
+/* Media Queries for Home.css */
+
+/* Mobile devices (< 480px) */
+@media screen and (max-width: 480px) {
+  .home {
+    padding: 10px;
+  }
+
+  h2, h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+/* Tablets (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .home {
+    padding: 15px;
+  }
+
+  h2, h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
